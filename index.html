@@ -51,10 +51,13 @@
 
     <div class="sticky-header">
         <div class="logo-bar">
+            <div class="header-left">
+                <button type="button" class="icon-btn menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
 
-            <div class="header-left-spacer"></div>
             <a href="#" class="brand-logo">
-
                 <img src="mashaani.webp" alt="Mashaani Official Logo - Traditional Wear">
             </a>
             
@@ -91,6 +94,37 @@
         </nav>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.menu-btn');
+            const navList = document.querySelector('.nav-list');
+            const icon = menuBtn.querySelector('i');
+
+            if (menuBtn && navList) {
+                menuBtn.addEventListener('click', () => {
+                    navList.classList.toggle('active');
+                    
+                    if (navList.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!menuBtn.contains(e.target) && !navList.contains(e.target) && navList.classList.contains('active')) {
+                    navList.classList.remove('active');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+
     <main class="hero-section">
         <div class="hero-shapes">
             <div class="shape shape-1"></div>
@@ -100,6 +134,8 @@
         </div>
         
         <div class="hero-content animate__animated animate__fadeInUp">
+            <div class="hero-line line-left"></div>
+            <div class="hero-line line-right"></div>
             <div class="hero-logo-wrapper">
                 <img src="mashaani.webp" alt="Mashaani Emblem" class="hero-emblem">
             </div>
@@ -170,48 +206,234 @@
         </div>
     </section>
 
-    <section class="footer-section">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>About Mashaani</h3>
-                <p>Celebrating the elegance of Indian tradition with a modern touch. Handcrafted sarees and leis that define grace.</p>
+    <!-- Best Sellers -->
+    <section class="best-sellers-section">
+        <div class="section-header">
+            <h2 class="section-title">Best Sellers</h2>
+            <p class="section-subtitle">Our most loved pieces that customers can't stop talking about</p>
+        </div>
+
+        <div class="best-sellers-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <span class="sale-badge">SALE</span>
+                    <div class="product-image" style="background-image: url('cart 1.webp');"></div>
+                    <div class="size-options">
+                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn" title="Quick View"><i class="far fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <span class="brand-name">Mashaani</span>
+                    <h3 class="product-title">Ready-to-wear saree</h3>
+                    <div class="product-price">
+                        <span class="original-price">&#8377;3500</span>
+                        <span class="current-price">&#8377;2800</span>
+                    </div>
+                    <span class="discount-tag">(20% OFF)</span>
+                    <div class="product-buttons">
+                        <button class="add-cart-btn">Add to Cart</button>
+                        <button class="wishlist-btn">Wishlist</button>
+                    </div>
+                </div>
             </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Shop All</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Best Sellers</a></li>
-                    <li><a href="#">Track Order</a></li>
-                </ul>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <span class="sale-badge">SALE</span>
+                    <div class="product-image" style="background-image: url('cart 2.webp');"></div>
+                    <div class="size-options">
+                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <span class="brand-name">Mashaani</span>
+                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                    <div class="product-price">
+                        <span class="original-price">&#8377;3000</span>
+                        <span class="current-price">&#8377;2700</span>
+                    </div>
+                    <span class="discount-tag">(10% OFF)</span>
+                    <div class="product-buttons">
+                        <button class="add-cart-btn">Add to Cart</button>
+                        <button class="wishlist-btn">Wishlist</button>
+                    </div>
+                </div>
             </div>
-            <div class="footer-column">
-                <h3>Policies</h3>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Shipping Policy</a></li>
-                    <li><a href="#">Returns & Exchanges</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <ul>                        
-                    <li><a href="tel:+919876543210"><i class="fab fa-whatsapp"></i> +91 98765 43210</a></li>
-                    <li><i class="far fa-envelope"></i> support@mashaani.in</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan, India</li>
-                </ul>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <span class="sale-badge">SALE</span>
+                    <div class="product-image" style="background-image: url('cart 3.webp');"></div>
+                    <div class="size-options">
+                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <span class="brand-name">Mashaani</span>
+                    <h3 class="product-title">Mehndi Colour Blouse</h3>
+                    <div class="product-price">
+                        <span class="original-price">&#8377;4000</span>
+                        <span class="current-price">&#8377;2800</span>
+                    </div>
+                    <span class="discount-tag">(30% OFF)</span>
+                    <div class="product-buttons">
+                        <button class="add-cart-btn">Add to Cart</button>
+                        <button class="wishlist-btn">Wishlist</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Mashaani. All Rights Reserved. Designed with <i class="fas fa-heart" color="red"></i> in India.</p>
+
+        <div class="center-btn-wrapper">
+            <a href="#" class="btn btn-primary view-all-btn">
+                <i class="fas fa-leaf"></i> View All Products
+            </a>
         </div>
     </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section">
+        <div class="section-header">
+            <h2 class="section-title">Why Choose Mashaani</h2>
+            <p class="section-subtitle">We don't just sell clothes, we create experiences that celebrate Indian heritage</p>
+        </div>
+
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon icon-sustainable">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="feature-title">Sustainable</h3>
+                <p class="feature-desc">Eco-friendly materials and processes</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon icon-handcrafted">
+                    <i class="fas fa-scissors"></i>
+                </div>
+                <h3 class="feature-title">Handcrafted</h3>
+                <p class="feature-desc">Each piece tells a unique story</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon icon-quality">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3 class="feature-title">Premium Quality</h3>
+                <p class="feature-desc">Finest materials and craftsmanship</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <div class="feature-icon icon-delivery">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3 class="feature-title">Fast Delivery</h3>
+                <p class="feature-desc">Quick and secure shipping</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Real stories from our amazing community</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <!-- Review 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="profile-img">P</div>
+                    <div class="customer-info">
+                        <h4 class="customer-name">Pooja Kapoor</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"The quality of the fabrics is exceptional! My wedding lehenga was absolutely stunning. The intricate embroidery and attention to detail made me feel like a princess. Mashaani truly understands Indian traditions."</p>
+                <div class="testimonial-footer">
+                    <span class="collection-tag">Wedding Collection</span>
+                    <i class="fas fa-heart like-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-column brand-column">
+                <div class="footer-logo">
+                    <img src="mashaani.webp" alt="Mashaani Logo" class="footer-logo-img">
+                    <span class="footer-brand-name">Mashaani</span>
+                </div>
+                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern elegance.</p>
+                
+                <div class="contact-info">
+                    <a href="tel:18001037308" class="contact-link phone-link">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-text">
+                            <span class="contact-main">18001037308</span>
+                            <span class="contact-sub">Toll-Free (9 AM - 7 PM, Mon-Sat)</span>
+                        </div>
+                    </a>
+                    <a href="mailto:enquiry@mashaani.in" class="contact-link email-link">
+                        <div class="contact-icon"><i class="far fa-envelope"></i></div>
+                        <span class="contact-main">enquiry@mashaani.in</span>
+                    </a>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="#" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-wrapper">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shop All</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Materials</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2024 Mashaani. Handcrafted with love in India.
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cancellation & Refund</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
