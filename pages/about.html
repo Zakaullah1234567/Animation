@@ -13,9 +13,8 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-    <link rel="stylesheet" href="styles.css">
-    
-    <script defer>
+    <link rel="stylesheet" href="aboutStyle.css">
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
@@ -28,12 +27,11 @@
     </script>
 </head>
 <body>
-    
-    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+     <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo">
-                <img src="assests/mashaani.webp" alt="Mashaani Logo">
+                <img src="../assests/mashaani.webp" alt="Mashaani Logo">
             </div>
             <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
         </div>
@@ -47,7 +45,7 @@
             </div>
 
             <nav class="sidebar-nav">
-                <a href="pages/shopAll.html" class="sidebar-item">
+                <a href="shopAll.html" class="sidebar-item">
                     <div class="sidebar-item-icon shop-icon"><i class="fas fa-shopping-bag"></i></div>
                     <div class="sidebar-item-text">
                         <span class="item-title">Shop All</span>
@@ -56,7 +54,7 @@
                     <i class="fas fa-chevron-right arrow-icon"></i>
                 </a>
 
-                <a href="pages/collection.html" class="sidebar-item">
+                <a href="collection.html" class="sidebar-item">
                     <div class="sidebar-item-icon collection-icon"><i class="fas fa-star"></i></div>
                     <div class="sidebar-item-text">
                         <span class="item-title">Collection</span>
@@ -65,7 +63,7 @@
                     <i class="fas fa-chevron-right arrow-icon"></i>
                 </a>
 
-                <a href="pages/materials.html" class="sidebar-item">
+                <a href="materials.html" class="sidebar-item">
                     <div class="sidebar-item-icon materials-icon"><i class="fas fa-layer-group"></i></div>
                     <div class="sidebar-item-text">
                         <span class="item-title">Materials</span>
@@ -74,7 +72,7 @@
                     <i class="fas fa-chevron-right arrow-icon"></i>
                 </a>
 
-                <a href="pages/about.html" class="sidebar-item">
+                <a href="about.html" class="sidebar-item active">
                     <div class="sidebar-item-icon about-icon"><i class="fas fa-heart"></i></div>
                     <div class="sidebar-item-text">
                         <span class="item-title">About</span>
@@ -83,7 +81,7 @@
                     <i class="fas fa-chevron-right arrow-icon"></i>
                 </a>
 
-                <a href="pages/contact.html" class="sidebar-item">
+                <a href="contact.html" class="sidebar-item">
                     <div class="sidebar-item-icon contact-icon"><i class="fas fa-comment-dots"></i></div>
                     <div class="sidebar-item-text">
                         <span class="item-title">Contact</span>
@@ -132,8 +130,8 @@
                 </button>
             </div>
 
-            <a href="#" class="brand-logo">
-                <img src="assests/mashaani.webp" alt="Mashaani Official Logo - Traditional Wear">
+            <a href="../index.html" class="brand-logo">
+                <img src="../assests/mashaani.webp" alt="Mashaani Official Logo - Traditional Wear">
             </a>
             
             <div class="header-actions">
@@ -145,7 +143,7 @@
 
         <nav class="main-nav">
             <ul class="nav-list">
-                <li><a href="pages/shopAll.html" class="nav-link">Shop All</a></li>
+                <li><a href="shopAll.html" class="nav-link">Shop All</a></li>
                 
                 <li class="dropdown-item">
                     <a href="#" class="nav-link">Categories <i class="fa-solid fa-angle-down"></i></a>
@@ -162,9 +160,9 @@
                     </ul>
                 </li>
 
-                <li><a href="pages/collection.html" class="nav-link">Collections</a></li>
-                <li><a href="pages/about.html" class="nav-link">About Us</a></li>
-                <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                <li><a href="collection.html" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -195,237 +193,125 @@
             });
         });
     </script>
-
-    <main class="hero-section">
-        <div class="hero-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
+    <section class="about-hero">
+        <div class="about-hero-content animate__animated animate__fadeIn">
+            <h1 class="about-hero-title">About Mashaani</h1>
+            <p class="about-hero-subtitle">Where heritage meets modern elegance - discover the story behind our brand</p>
         </div>
-        
-        <div class="hero-content animate__animated animate__fadeInUp">
-            <div class="hero-line line-left"></div>
-            <div class="hero-line line-right"></div>
-            <div class="hero-logo-wrapper">
-                <img src="assests/mashaani.webp" alt="Mashaani Emblem" class="hero-emblem">
+    </section>
+    
+    <section class="our-story-section">
+        <div class="story-container">
+            <div class="story-image-wrap">
+                <div class="story-image" style="background-image: url('assests/about 1.webp');"></div>
+            </div>
+            <div class="story-content">
+                <span class="story-badge">Our Story</span>
+                <h2 class="story-title">Celebrating Indian Heritage Since 2024</h2>
+                <div class="story-text">
+                    <p>Mashaani was born from a deep love for Indian textiles and a vision to make traditional craftsmanship accessible to the modern world. Our name, derived from the Sanskrit word meaning “crafted with devotion,” reflects our commitment to honoring the artisans who pour their hearts into every piece.</p>
+                    <p>Founded by a team of fashion enthusiasts and cultural preservationists, we bridge the gap between age-old techniques and contemporary design sensibilities. Each garment tells a story of heritage, skill, and artistic expression.</p>
+                    <p>From the bustling textile hubs of Gujarat to the silk weaving centers of Karnataka, we work directly with artisan communities, ensuring fair wages and preserving traditional techniques for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="core-values-section">
+        <div class="values-header">
+            <h2 class="values-title">Our Core Values</h2>
+            <p class="values-subtitle">The principles that guide everything we do at Mashaani</p>
+        </div>
+        <div class="values-container">
+            <div class="value-card">
+                <div class="value-icon-circle">
+                    <span class="value-emoji">🎨</span>
+                </div>
+                <h3 class="value-card-title">Artisan Heritage</h3>
+                <p class="value-card-desc">We honor traditional craftsmanship and support the artisans who keep these skills alive.</p>
             </div>
             
-            <h1 class="hero-title">Mashaani</h1>
-            <p class="hero-subtitle">Naari With Saree Enhance Beauty</p>
-            <p class="hero-description">Celebrating timeless traditions and modern elegance</p>
+            <div class="value-card">
+                <div class="value-icon-circle">
+                    <span class="value-emoji">🌱</span>
+                </div>
+                <h3 class="value-card-title">Sustainability</h3>
+                <p class="value-card-desc">Our commitment to eco-friendly practices ensures a better future for our planet.</p>
+            </div>
             
-            <div class="hero-actions">
-                <a href="#" class="btn btn-primary">
-                    <i class="fas fa-leaf"></i> Explore Collection <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#" class="btn btn-outline">
-                    Our Story <i class="far fa-heart"></i>
-                </a>
+            <div class="value-card">
+                <div class="value-icon-circle">
+                    <span class="value-emoji">✨</span>
+                </div>
+                <h3 class="value-card-title">Quality Excellence</h3>
+                <p class="value-card-desc">Every piece meets our rigorous standards for materials, construction, and finish.</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon-circle">
+                    <span class="value-emoji">🤝</span>
+                </div>
+                <h3 class="value-card-title">Fair Trade</h3>
+                <p class="value-card-desc">We believe in ethical business practices and fair compensation for all our partners.</p>
             </div>
         </div>
-    </main>
+    </section>
 
-    <section class="featured-section">
-        <div class="section-header">
-            <h2 class="section-title">Featured Collections</h2>
-            <p class="section-subtitle">Discover our carefully curated collections that blend traditional craftsmanship with contemporary design</p>
+    <section class="process-section">
+        <div class="process-header">
+            <h2 class="process-title">Our Craftsmanship Process</h2>
+            <p class="process-subtitle">From concept to creation, every step is carefully orchestrated</p>
         </div>
-
-        <div class="collections-grid">
-            <div class="collection-card">
-                <div class="card-image" style="background-image: url('assests/card 1.webp');"></div> 
-                <div class="card-overlay"></div>
-                
-                <span class="item-badge">29 Items</span>
-                <div class="icon-badge"><i class="fas fa-spa"></i></div>
-                
-                <div class="card-content">
-                    <h3 class="card-title">Daily Wear Suit</h3>
-                    <p class="card-desc">Comfortable and stylish everyday clothing</p>
-                    <a href="#" class="card-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-image-wrap">
+                    <div class="process-image" style="background-image: url('assests/craft 1.webp');"></div>
+                    <div class="process-number">01</div>
+                </div>
+                <div class="process-info">
+                    <h3 class="process-card-title">Design & Inspiration</h3>
+                    <p class="process-card-desc">Our designers draw inspiration from traditional Indian motifs, colors, and silhouettes, reimagining them for contemporary wear.</p>
                 </div>
             </div>
 
-            <div class="collection-card">
-                <div class="card-image" style="background-image: url('assests/card 2.webp');"></div>
-                <div class="card-overlay"></div>
-                
-                <span class="item-badge">15 Items</span>
-                <div class="icon-badge"><i class="fas fa-tshirt"></i></div>
-                
-                <div class="card-content">
-                    <h3 class="card-title">Daily Wear Saree</h3>
-                    <p class="card-desc">Handcrafted with age-old techniques passed down through generations</p>
-                    <a href="#" class="card-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+            <div class="process-card">
+                <div class="process-image-wrap">
+                    <div class="process-image" style="background-image: url('assests/craft 2.webp');"></div>
+                    <div class="process-number">02</div>
+                </div>
+                <div class="process-info">
+                    <h3 class="process-card-title">Artisan Collaboration</h3>
+                    <p class="process-card-desc">We work closely with skilled artisans across India, combining their expertise with our design vision to create unique pieces.</p>
                 </div>
             </div>
 
-            <div class="collection-card">
-                <div class="card-image" style="background-image: url('assests/card 3.png');"></div>
-                <div class="card-overlay"></div>
-                
-                <span class="item-badge">10 Items</span>
-                <div class="icon-badge"><i class="fas fa-female"></i></div>
-                
-                <div class="card-content">
-                    <h3 class="card-title">Siders Lehnga</h3>
-                    <p class="card-desc">Elegant bridal wear and wedding party outfits</p>
-                    <a href="#" class="card-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+            <div class="process-card">
+                <div class="process-image-wrap">
+                    <div class="process-image" style="background-image: url('assests/craft 3.webp');"></div>
+                    <div class="process-number">03</div>
+                </div>
+                <div class="process-info">
+                    <h3 class="process-card-title">Quality Assurance</h3>
+                    <p class="process-card-desc">Every garment undergoes rigorous quality checks to ensure it meets our high standards before reaching you.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="best-sellers-section">
-        <div class="section-header">
-            <h2 class="section-title">Best Sellers</h2>
-            <p class="section-subtitle">Our most loved pieces that customers can't stop talking about</p>
+    <section class="team-section">
+        <div class="team-header">
+            <h2 class="team-title">Meet Our Team</h2>
+            <p class="team-subtitle">The passionate individuals behind Mashaani's success</p>
         </div>
-<div class="best-sellers-grid">
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 1.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                    <div class="product-actions">
-                        <button class="action-btn" title="Quick View"><i class="far fa-eye"></i></button>
-                    </div>
+        <div class="team-container">
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="assests/reviewImage.webp" alt="Pooja Kapoor">
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 2.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 3.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-        <div class="center-btn-wrapper">
-            <a href="#" class="btn btn-primary view-all-btn">
-                <i class="fas fa-leaf"></i> View All Products
-            </a>
-        </div>
-    </section>
-
-    <section class="why-choose-section">
-        <div class="section-header">
-            <h2 class="section-title">Why Choose Mashaani</h2>
-            <p class="section-subtitle">We don't just sell clothes, we create experiences that celebrate Indian heritage</p>
-        </div>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon icon-sustainable">
-                    <i class="fas fa-seedling"></i>
-                </div>
-                <h3 class="feature-title">Sustainable</h3>
-                <p class="feature-desc">Eco-friendly materials and processes</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon icon-handcrafted">
-                    <i class="fas fa-scissors"></i>
-                </div>
-                <h3 class="feature-title">Handcrafted</h3>
-                <p class="feature-desc">Each piece tells a unique story</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon icon-quality">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <h3 class="feature-title">Premium Quality</h3>
-                <p class="feature-desc">Finest materials and craftsmanship</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon icon-delivery">
-                    <i class="fas fa-shipping-fast"></i>
-                </div>
-                <h3 class="feature-title">Fast Delivery</h3>
-                <p class="feature-desc">Quick and secure shipping</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials-section">
-        <div class="section-header">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <p class="section-subtitle">Real stories from our amazing community</p>
-        </div>
-
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="profile-img">P</div>
-                    <div class="customer-info">
-                        <h4 class="customer-name">Pooja Kapoor</h4>
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <p class="testimonial-text">"The quality of the fabrics is exceptional! My wedding lehenga was absolutely stunning. The intricate embroidery and attention to detail made me feel like a princess. Mashaani truly understands Indian traditions."</p>
-                <div class="testimonial-footer">
-                    <span class="collection-tag">Wedding Collection</span>
-                    <i class="fas fa-heart like-icon"></i>
+                <div class="team-info">
+                    <h3 class="member-name">Pooja Kapoor</h3>
+                    <span class="member-role">Founder & Creative Director</span>
+                    <p class="member-bio">With over 15 years in fashion design, Pooja brings together traditional aesthetics with modern sensibilities.</p>
                 </div>
             </div>
         </div>
@@ -434,7 +320,7 @@
         <div class="footer-container">
             <div class="footer-column brand-column">
                 <div class="footer-logo">
-                    <img src="assests/mashaani.webp" alt="Mashaani Logo" class="footer-logo-img">
+                    <img src="../assests/mashaani.webp" alt="Mashaani Logo" class="footer-logo-img">
                     <span class="footer-brand-name">Mashaani</span>
                 </div>
                 <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern elegance.</p>
@@ -494,6 +380,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>
