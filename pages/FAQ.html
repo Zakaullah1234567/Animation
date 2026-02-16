@@ -13,7 +13,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-    <link rel="stylesheet" href="aboutStyle.css">
+    <link rel="stylesheet" href="FAQstyle.css">
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.querySelectorAll('.nav-link');
@@ -163,7 +163,7 @@
                 <li><a href="collection.html" class="nav-link">Collections</a></li>
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="FAQ.html" class="nav-link">FAQ</a></li>
+                <li><a href="FAQ.html" class="nav-link active">FAQ</a></li>
             </ul>
         </nav>
     </div>
@@ -194,129 +194,144 @@
             });
         });
     </script>
-    <section class="about-hero">
-        <div class="about-hero-content animate__animated animate__fadeIn">
-            <h1 class="about-hero-title">About Mashaani</h1>
-            <p class="about-hero-subtitle">Where heritage meets modern elegance - discover the story behind our brand</p>
+
+    <!-- FAQ Hero Section -->
+    <section class="faq-hero">
+        <div class="faq-hero-content">
+            <h1 class="faq-hero-title">Frequently Asked Questions</h1>
+            <p class="faq-hero-subtitle">Everything you need to know about Mashaani</p>
         </div>
     </section>
-    
-    <section class="our-story-section">
-        <div class="story-container">
-            <div class="story-image-wrap">
-                <div class="story-image" style="background-image: url('assests/about 1.webp');"></div>
-            </div>
-            <div class="story-content">
-                <span class="story-badge">Our Story</span>
-                <h2 class="story-title">Celebrating Indian Heritage Since 2024</h2>
-                <div class="story-text">
-                    <p>Mashaani was born from a deep love for Indian textiles and a vision to make traditional craftsmanship accessible to the modern world. Our name, derived from the Sanskrit word meaning “crafted with devotion,” reflects our commitment to honoring the artisans who pour their hearts into every piece.</p>
-                    <p>Founded by a team of fashion enthusiasts and cultural preservationists, we bridge the gap between age-old techniques and contemporary design sensibilities. Each garment tells a story of heritage, skill, and artistic expression.</p>
-                    <p>From the bustling textile hubs of Gujarat to the silk weaving centers of Karnataka, we work directly with artisan communities, ensuring fair wages and preserving traditional techniques for future generations.</p>
+
+    <!-- FAQ Content Section -->
+    <section class="faq-content-section">
+        <div class="faq-container">
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I contact customer service?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our customer service team is available Monday through Friday, 9 AM - 5 PM ET. Reach us at hello@mashaani.com or +1(929) 460-3208. We respond within 24 business hours.</p>
+                    </div>
                 </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>When will my order ship?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Orders typically ship within 2–3 business days of confirmation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I cancel or modify my order?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, orders can be modified or canceled before shipment. Contact us immediately for assistance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are my shipping options?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer standard shipping (5-7 days) and express shipping (2-3 days) across India.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, debit cards, UPI, net banking, and cash on delivery.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I find my perfect size?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Each product page includes detailed size charts and measuring guides. Our customer service team can also help you find the right fit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I care for my Mashaani pieces?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Care instructions are provided with each product and on the product page. Most items require gentle hand washing or dry cleaning.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Where are your products made?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All Mashaani products are handcrafted with love in India by skilled artisans using traditional techniques.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is your return policy?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer 30-day returns for unworn items in original condition with tags attached.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you ship internationally?</span>
+                        <div class="faq-icon-wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Currently, we ship within India. International shipping will be available soon.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="still-have-questions">
+                <h2>Still have questions?</h2>
+                <p>Our team is here to help you with anything you need.</p>
+                <a href="contact.html" class="contact-us-btn">Contact Us &rarr;</a>
             </div>
         </div>
     </section>
 
-    <section class="core-values-section">
-        <div class="values-header">
-            <h2 class="values-title">Our Core Values</h2>
-            <p class="values-subtitle">The principles that guide everything we do at Mashaani</p>
-        </div>
-        <div class="values-container">
-            <div class="value-card">
-                <div class="value-icon-circle">
-                    <span class="value-emoji">🎨</span>
-                </div>
-                <h3 class="value-card-title">Artisan Heritage</h3>
-                <p class="value-card-desc">We honor traditional craftsmanship and support the artisans who keep these skills alive.</p>
-            </div>
-            
-            <div class="value-card">
-                <div class="value-icon-circle">
-                    <span class="value-emoji">🌱</span>
-                </div>
-                <h3 class="value-card-title">Sustainability</h3>
-                <p class="value-card-desc">Our commitment to eco-friendly practices ensures a better future for our planet.</p>
-            </div>
-            
-            <div class="value-card">
-                <div class="value-icon-circle">
-                    <span class="value-emoji">✨</span>
-                </div>
-                <h3 class="value-card-title">Quality Excellence</h3>
-                <p class="value-card-desc">Every piece meets our rigorous standards for materials, construction, and finish.</p>
-            </div>
-            
-            <div class="value-card">
-                <div class="value-icon-circle">
-                    <span class="value-emoji">🤝</span>
-                </div>
-                <h3 class="value-card-title">Fair Trade</h3>
-                <p class="value-card-desc">We believe in ethical business practices and fair compensation for all our partners.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="process-section">
-        <div class="process-header">
-            <h2 class="process-title">Our Craftsmanship Process</h2>
-            <p class="process-subtitle">From concept to creation, every step is carefully orchestrated</p>
-        </div>
-        <div class="process-grid">
-            <div class="process-card">
-                <div class="process-image-wrap">
-                    <div class="process-image" style="background-image: url('assests/craft 1.webp');"></div>
-                    <div class="process-number">01</div>
-                </div>
-                <div class="process-info">
-                    <h3 class="process-card-title">Design & Inspiration</h3>
-                    <p class="process-card-desc">Our designers draw inspiration from traditional Indian motifs, colors, and silhouettes, reimagining them for contemporary wear.</p>
-                </div>
-            </div>
-
-            <div class="process-card">
-                <div class="process-image-wrap">
-                    <div class="process-image" style="background-image: url('assests/craft 2.webp');"></div>
-                    <div class="process-number">02</div>
-                </div>
-                <div class="process-info">
-                    <h3 class="process-card-title">Artisan Collaboration</h3>
-                    <p class="process-card-desc">We work closely with skilled artisans across India, combining their expertise with our design vision to create unique pieces.</p>
-                </div>
-            </div>
-
-            <div class="process-card">
-                <div class="process-image-wrap">
-                    <div class="process-image" style="background-image: url('assests/craft 3.webp');"></div>
-                    <div class="process-number">03</div>
-                </div>
-                <div class="process-info">
-                    <h3 class="process-card-title">Quality Assurance</h3>
-                    <p class="process-card-desc">Every garment undergoes rigorous quality checks to ensure it meets our high standards before reaching you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="team-section">
-        <div class="team-header">
-            <h2 class="team-title">Meet Our Team</h2>
-            <p class="team-subtitle">The passionate individuals behind Mashaani's success</p>
-        </div>
-        <div class="team-container">
-            <div class="team-card">
-                <div class="team-image">
-                    <img src="assests/reviewImage.webp" alt="Pooja Kapoor">
-                </div>
-                <div class="team-info">
-                    <h3 class="member-name">Pooja Kapoor</h3>
-                    <span class="member-role">Founder & Creative Director</span>
-                    <p class="member-bio">With over 15 years in fashion design, Pooja brings together traditional aesthetics with modern sensibilities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Footer -->
     <footer class="footer-section">
         <div class="footer-container">
             <div class="footer-column brand-column">
@@ -351,12 +366,12 @@
                 <div class="footer-column">
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Shop All</a></li>
-                        <li><a href="#">Collections</a></li>
+                        <li><a href="shopAll.html">Shop All</a></li>
+                        <li><a href="collection.html">Collections</a></li>
                         <li><a href="#">Materials</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -381,5 +396,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

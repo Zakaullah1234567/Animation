@@ -403,6 +403,7 @@ body {
     .materials-icon { background: #f3e5f5; color: #9c27b0; }
     .about-icon { background: #fce4ec; color: #e91e63; }
     .contact-icon { background: #f1f8e9; color: #8bc34a; }
+    .faq-icon { background: #e8f5e9; color: #4caf50; }
 
     .sidebar-item-text {
         flex: 1;
