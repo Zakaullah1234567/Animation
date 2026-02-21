@@ -462,7 +462,6 @@ body {
     .sidebar-social-icon.whatsapp { background: #25d366; }
 }
 
-/* Contact Hero Section */
 .contact-hero {
     background: linear-gradient(to right rgb(233, 225, 110), rgb(216, 142, 6), rgb(197, 129, 5));
     padding: 80px 5% 40px;
@@ -488,13 +487,11 @@ body {
     line-height: 1.6;
 }
 
-/* Contact Content Section */
 .contact-content-section {
     padding: 80px 5%;
     background-color: #fff;
 }
 
-/* Contact Information Wrapper */
 .contact-info-wrapper {
     display: flex;
     justify-content: center;
@@ -502,7 +499,6 @@ body {
     margin-bottom: 60px;
 }
 
-/* Contact Form Container */
 .contact-form-container {
     display: flex;
     justify-content: center;
@@ -510,7 +506,6 @@ body {
     margin: 0 auto;
 }
 
-/* Contact Form */
 .contact-form-wrapper {
     background: #fff;
     padding: 50px;
@@ -643,7 +638,6 @@ body {
     box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
 }
 
-/* Contact Information */
 .contact-info-wrapper {
     display: flex;
     justify-content: center;
@@ -748,7 +742,6 @@ body {
     line-height: 1.5;
 }
 
-/* Footer Styles */
 .footer-section {
     background-color: #050510eb;
     color: #e0e0e0;
@@ -925,7 +918,6 @@ body {
     color: #fdd835;
 }
 
-/* Responsive Design */
 @media (max-width: 992px) {
     .contact-hero-title {
         font-size: 2.5rem;

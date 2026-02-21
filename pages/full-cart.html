@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Mashaani</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="cartStyle.css">
+    <link rel="stylesheet" href="fullCartStyle.css">
+
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+</head>
+
+<body>
+    
+    <header class="announcement-bar">
+        <div class="scroll-container">
+            <div class="scrolling-content">
+                <span class="ticker-item">•</span> GET 10% OFF ON PREPAID: CODE "PRE10"
+                <span class="ticker-item">•</span> BUY 2 GET 15% OFF
+                <span class="ticker-item">•</span> FREE SHIPPING > ₹1000
+                <span class="ticker-item">•</span> NEW COLLECTION AVAILABLE
+            </div>
+        </div>
+    </header>
+
+    <div class="sticky-header">
+        <div class="logo-bar">
+            <div class="header-left">
+                <button type="button" class="icon-btn menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <a href="../index.html" class="brand-logo">
+                <img src="../assests/mashaani.webp" alt="Mashaani Official Logo">
+            </a>
+            <div class="header-actions">
+                <button type="button" class="icon-btn cart-btn" aria-label="View Cart">
+                    <i class="fa-brands fa-opencart"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="shopAll.html" class="nav-link">Shop All</a></li>
+                <li><a href="collection.html" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="FAQ.html" class="nav-link">FAQ</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="breadcrumbs">
+        <a href="../index.html">Home</a> / <span>Shopping Cart</span>
+    </div>
+
+    <section class="cart-page-hero">
+        <h1 class="cart-page-title">Your Shopping Cart</h1>
+        <p class="cart-page-subtitle">1 item ready for checkout</p>
+    </section>
+
+    <div class="cart-page-container">
+        
+        <main class="cart-items-section">
+            <div class="section-header">
+                <h2 class="section-title">Cart Items</h2>
+                <a href="#" class="clear-all">Clear All</a>
+            </div>
+
+            <div class="cart-item-full">
+                <img src="../assests/cart 2.webp" alt="yellow golden kadai blouse" class="item-img-large">
+                <div class="item-info-full">
+                    <span class="item-cat">Blouses</span>
+                    <h3 class="item-title-full">yellow golden kadai blouse</h3>
+
+                    <div class="item-tags">
+                        <div class="item-tag">Size: M</div>
+                        <div class="item-tag">Color: <span class="color-dot" style="background-color: #ffff00;"></span>
+                        </div>
+                    </div>
+
+                    <div class="item-details-row">
+                        <div class="qty-wrap">
+                            <span class="qty-label">Qty:</span>
+                            <div class="qty-selector">
+                                <button class="qty-btn">-</button>
+                                <input type="text" class="qty-input" value="1" readonly>
+                                <button class="qty-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="price-wrap">
+                            <span class="main-price">₹2700</span>
+                            <span class="sub-price">₹2700 each</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="remove-item" style="top: 25px; right: 25px;"><i class="fas fa-times"></i></span>
+            </div>
+        </main>
+
+        <aside class="order-summary-card">
+            <h2 class="summary-title">Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal (1 items)</span>
+                <span>₹2700</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span style="color: #22c55e;">Free</span>
+            </div>
+            <div class="summary-row">
+                <span>Tax</span>
+                <span>₹216</span>
+            </div>
+
+            <div class="summary-row total">
+                <span>Total</span>
+                <span class="total-val">₹2916</span>
+            </div>
+
+            <div class="summary-actions">
+                <button class="btn-proceed">Proceed to Checkout</button>
+                <a href="shopAll.html" class="btn-continue-shopping">Continue Shopping</a>
+            </div>
+
+            <div class="badge-container">
+                <div class="badge-item badge-secure">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure Payment</span>
+                </div>
+                <div class="badge-item badge-fast">
+                    <i class="fas fa-truck"></i>
+                    <span>Fast Delivery</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer-section">
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2024 Mashaani. Handcrafted with love in India.
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cancellation & Refund</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

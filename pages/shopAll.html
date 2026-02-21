@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mashaani - Naari With Saree Enhance Beauty</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="shopStyles.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="cartStyle.css">
+
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <script src="../js/shop.js" defer></script>
 </head>
+
 <body>
-     <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo">
@@ -133,7 +131,7 @@
             <a href="../index.html" class="brand-logo">
                 <img src="../assests/mashaani.webp" alt="Mashaani Official Logo - Traditional Wear">
             </a>
-            
+
             <div class="header-actions">
                 <button type="button" class="icon-btn cart-btn" aria-label="View Cart">
                     <i class="fa-brands fa-opencart"></i>
@@ -144,7 +142,7 @@
         <nav class="main-nav">
             <ul class="nav-list">
                 <li><a href="shopAll.html" class="nav-link">Shop All</a></li>
-                
+
                 <li class="dropdown-item">
                     <a href="#" class="nav-link">Categories <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
@@ -156,7 +154,8 @@
                         <li><a href="#">Heavy Saree</a></li>
                         <li><a href="#">Heavy Suit</a></li>
                         <li><a href="#">Blouses</a></li>
-                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a></li>
+                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a>
+                        </li>
                     </ul>
                 </li>
 
@@ -177,7 +176,7 @@
     </section>
 
     <div class="shop-container">
-        <!-- Filter Sidebar -->
+        
         <aside class="filter-sidebar">
             <button class="close-filter" id="closeFilter"><i class="fas fa-times"></i></button>
             <div class="filter-header">
@@ -222,7 +221,7 @@
 
             <div class="filter-group">
                 <h3 class="filter-title">Price Range</h3>
-                    <div class="price-inputs">
+                <div class="price-inputs">
                     <input type="number" placeholder="Min" class="price-input">
                     <span>to</span>
                     <input type="number" placeholder="Max" class="price-input">
@@ -233,19 +232,19 @@
                 <h3 class="filter-title dropdown-trigger">Size <i class="fas fa-chevron-down"></i></h3>
                 <div class="filter-options dropdown-content">
                     <label class="filter-label">
-                        <input type="checkbox"> <span>S</span>
+                        <input type="checkbox" data-filter="size"> <span>S</span>
                     </label>
                     <label class="filter-label">
-                        <input type="checkbox"> <span>M</span>
+                        <input type="checkbox" data-filter="size"> <span>M</span>
                     </label>
                     <label class="filter-label">
-                        <input type="checkbox"> <span>L</span>
+                        <input type="checkbox" data-filter="size"> <span>L</span>
                     </label>
                     <label class="filter-label">
-                        <input type="checkbox"> <span>XL</span>
+                        <input type="checkbox" data-filter="size"> <span>XL</span>
                     </label>
                     <label class="filter-label">
-                        <input type="checkbox"> <span>XXL</span>
+                        <input type="checkbox" data-filter="size"> <span>XXL</span>
                     </label>
                 </div>
             </div>
@@ -254,26 +253,36 @@
                 <h3 class="filter-title dropdown-trigger">Color <i class="fas fa-chevron-down"></i></h3>
                 <div class="filter-options dropdown-content">
                     <label class="filter-label">
-                        <input type="checkbox"> <span class="color-swatch" style="background: #800000;"></span> <span>Maroon</span>
+                        <input type="checkbox" data-filter="color"> <span class="color-swatch"
+                            style="background: #800000;"></span>
+                        <span>Maroon</span>
                     </label>
                     <label class="filter-label">
-                        <input type="checkbox"> <span class="color-swatch" style="background: #e1ad01;"></span> <span>Mustard</span>
+                        <input type="checkbox" data-filter="color"> <span class="color-swatch"
+                            style="background: #e1ad01;"></span>
+                        <span>Mustard</span>
                     </label>
                     <label class="filter-label">
-                        <input type="checkbox"> <span class="color-swatch" style="background: #4b5320;"></span> <span>Mehndi</span>
+                        <input type="checkbox" data-filter="color"> <span class="color-swatch"
+                            style="background: #4b5320;"></span>
+                        <span>Mehndi</span>
                     </label>
                     <label class="filter-label">
-                        <input type="checkbox"> <span class="color-swatch" style="background: #ffc0cb;"></span> <span>Pink</span>
+                        <input type="checkbox" data-filter="color"> <span class="color-swatch"
+                            style="background: #ffc0cb;"></span>
+                        <span>Pink</span>
                     </label>
                     <label class="filter-label">
-                        <input type="checkbox"> <span class="color-swatch" style="background: #ffff00;"></span> <span>Yellow</span>
+                        <input type="checkbox" data-filter="color"> <span class="color-swatch"
+                            style="background: #ffff00;"></span>
+                        <span>Yellow</span>
                     </label>
                 </div>
             </div>
         </aside>
 
         <main class="product-listing">
-            <!-- Mobile Filter Trigger -->
+            
             <button class="mobile-filter-btn" id="mobileFilterBtn">
                 <i class="fas fa-filter"></i> Filters
             </button>
@@ -297,1255 +306,1201 @@
                         </select>
                     </div>
                     <div class="view-toggles">
-                        <button class="view-btn active" id="gridViewBtn" title="Grid View"><i class="fas fa-th-large"></i></button>
+                        <button class="view-btn active" id="gridViewBtn" title="Grid View"><i
+                                class="fas fa-th-large"></i></button>
                         <button class="view-btn" id="listViewBtn" title="List View"><i class="fas fa-list"></i></button>
                     </div>
                 </div>
             </div>
 
             <div class="best-sellers-grid" id="productGrid">
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 1.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div id="noProductsMessage"
+                    style="display: none; grid-column: 1 / -1; text-align: center; padding: 50px; color: #666;">
+                    <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 20px; color: #ddd;"></i>
+                    <h3>No products found matching your criteria</h3>
+                    <p>Try adjusting your search or filters to find what you're looking for.</p>
+                </div>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 1.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn" data-id="shop-readytowea" data-title="Ready-to-wear saree"
+                                data-price="2800" data-image="assests/cart 1.webp">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 2.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 2.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn" data-id="shop-2" data-title="Yellow Golden Kadai Blouse"
+                                data-price="2700" data-image="assests/cart 2.webp">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 3.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 3.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn" data-id="shop-3" data-title="Mehndi Colour Blouse"
+                                data-price="2800" data-image="assests/cart 3.webp">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 4.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 4.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn" data-id="shop-4" data-title="Ready-to-wear saree"
+                                data-price="2800" data-image="assests/cart 4.webp">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 5.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 5.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn" data-id="shop-5" data-title="Yellow Golden Kadai Blouse"
+                                data-price="2700" data-image="assests/cart 5.webp">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 6.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL"
+                    data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 6.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 7.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
-             <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 7.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 8.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 8.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 9.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 9.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 10.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
-             <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 10.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 11.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M L"
+                    data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 11.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 12.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 12.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 13.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
-             <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 13.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 14.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 14.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 15.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL"
+                    data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 15.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 16.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 16.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 17.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M L"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 17.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 18.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 18.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 19.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 19.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 20.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 20.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 21.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 21.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 22.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 22.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 23.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M L"
+                    data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 23.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 24.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL" data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 24.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 25.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 25.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 26.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 26.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 27.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 27.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 28.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 28.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 29.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 29.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 30.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 30.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 31.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 31.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 32.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 32.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 33.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 33.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 34.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 34.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 35.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 35.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 36.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 36.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 37.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 37.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 38.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 38.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 39.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 39.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 40.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 40.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 41.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 41.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 42.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 42.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 43.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 43.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 44.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 44.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 45.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 45.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Maroon">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 46.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 46.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 47.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Mustard">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 47.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 48.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Blouses" data-price="2700" data-size="S M" data-color="Mehndi">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 48.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Mehndi Colour Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;4000</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(30% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Mehndi Colour Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;4000</span>
-                        <span class="current-price">&#8377;2800</span>
+                <div class="product-card" data-category="Blouses" data-price="2800" data-size="L XL XXL"
+                    data-color="Pink">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 49.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                    <span class="discount-tag">(30% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
-                    </div>
-                </div>
-            </div> <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 49.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Ready-to-wear saree</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3500</span>
-                        <span class="current-price">&#8377;2800</span>
-                    </div>
-                    <span class="discount-tag">(20% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Ready-to-wear saree</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3500</span>
+                            <span class="current-price">&#8377;2800</span>
+                        </div>
+                        <span class="discount-tag">(20% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="sale-badge">SALE</span>
-                    <div class="product-image" style="background-image: url('assests/cart 50.webp');"></div>
-                    <div class="size-options">
-                        <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                <div class="product-card" data-category="Daily Wear Saree" data-price="2800" data-size="S M L"
+                    data-color="Yellow">
+                    <div class="product-image-wrapper">
+                        <span class="sale-badge">SALE</span>
+                        <div class="product-image" style="background-image: url('assests/cart 50.webp');"></div>
+                        <div class="size-options">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span><span>XXL</span>
+                        </div>
                     </div>
-                </div>
-                <div class="product-details">
-                    <span class="brand-name">Mashaani</span>
-                    <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
-                    <div class="product-price">
-                        <span class="original-price">&#8377;3000</span>
-                        <span class="current-price">&#8377;2700</span>
-                    </div>
-                    <span class="discount-tag">(10% OFF)</span>
-                    <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
-                        <button class="wishlist-btn">Wishlist</button>
+                    <div class="product-details">
+                        <span class="brand-name">Mashaani</span>
+                        <h3 class="product-title">Yellow Golden Kadai Blouse</h3>
+                        <div class="product-price">
+                            <span class="original-price">&#8377;3000</span>
+                            <span class="current-price">&#8377;2700</span>
+                        </div>
+                        <span class="discount-tag">(10% OFF)</span>
+                        <div class="product-buttons">
+                            <button class="add-cart-btn">Add to Cart</button>
+                            <button class="wishlist-btn">Wishlist</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </main>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.querySelector('.menu-btn');
-            const mobileSidebar = document.getElementById('mobileSidebar');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
-            const closeSidebar = document.getElementById('closeSidebar');
-
-            const gridViewBtn = document.getElementById('gridViewBtn');
-            const listViewBtn = document.getElementById('listViewBtn');
-            const productGrid = document.getElementById('productGrid');
-            const mobileFilterBtn = document.getElementById('mobileFilterBtn');
-            const filterSidebar = document.querySelector('.filter-sidebar');
-
-            if (gridViewBtn && listViewBtn && productGrid) {
-                gridViewBtn.addEventListener('click', () => {
-                    productGrid.classList.remove('list-view');
-                    gridViewBtn.classList.add('active');
-                    listViewBtn.classList.remove('active');
-                });
-
-                listViewBtn.addEventListener('click', () => {
-                    productGrid.classList.add('list-view');
-                    listViewBtn.classList.add('active');
-                    gridViewBtn.classList.remove('active');
-                });
-            }
-             const closeFilter = document.getElementById('closeFilter');
-
-            const toggleSidebar = () => {
-                const isMenuOpen = mobileSidebar.classList.contains('active');
-                const isFilterOpen = filterSidebar && filterSidebar.classList.contains('active');
-
-                if (isMenuOpen) {
-                    mobileSidebar.classList.remove('active');
-                }
-                
-                if (isFilterOpen) {
-                    filterSidebar.classList.remove('active');
-                }
-
-                sidebarOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            };
-
-            const openMenu = () => {
-                mobileSidebar.classList.add('active');
-                sidebarOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            };
-
-            const openFilter = () => {
-                filterSidebar.classList.add('active');
-                sidebarOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            };
-
-            if (menuBtn) menuBtn.addEventListener('click', openMenu);
-            if (mobileFilterBtn) mobileFilterBtn.addEventListener('click', openFilter);
-            if (closeSidebar) closeSidebar.addEventListener('click', toggleSidebar);
-            if (closeFilter) closeFilter.addEventListener('click', toggleSidebar);
-            if (sidebarOverlay) sidebarOverlay.addEventListener('click', toggleSidebar);
-
-            // Smart Sticky Sidebar
-            const handleStickySidebar = () => {
-                const sidebar = document.querySelector('.filter-sidebar');
-                if (!sidebar) return;
-
-                if (window.innerWidth <= 768) {
-                    // Reset inline styles for mobile view
-                    sidebar.style.position = '';
-                    sidebar.style.top = '';
-                    sidebar.style.bottom = '';
-                    return;
-                }
-
-                const viewportHeight = window.innerHeight;
-                const sidebarHeight = sidebar.offsetHeight;
-                const stickyTop = 130; 
-                const stickyBottom = 30; 
-
-                if (sidebarHeight + stickyTop + stickyBottom > viewportHeight) {
-                    // Tall Sidebar: Stick to bottom
-                    sidebar.style.top = 'auto';
-                    sidebar.style.bottom = `${stickyBottom}px`;
-                    sidebar.style.position = 'sticky';
-                } else {
-                    // Short Sidebar: Stick to top
-                    sidebar.style.top = `${stickyTop}px`;
-                    sidebar.style.bottom = 'auto';
-                    sidebar.style.position = 'sticky';
-                }
-            };
-
-            window.addEventListener('resize', handleStickySidebar);
-            document.addEventListener('scroll', handleStickySidebar);
-            handleStickySidebar();
-
-            const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
-            dropdownTriggers.forEach(trigger => {
-                trigger.addEventListener('click', () => {
-                    const content = trigger.nextElementSibling;
-                    if (content && content.classList.contains('dropdown-content')) {
-                        trigger.classList.toggle('active');
-                        content.classList.toggle('show');
-                    }
-                });
-            });
-
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
     <footer class="footer-section">
         <div class="footer-container">
             <div class="footer-column brand-column">
@@ -1553,8 +1508,9 @@
                     <img src="../assests/mashaani.webp" alt="Mashaani Logo" class="footer-logo-img">
                     <span class="footer-brand-name">Mashaani</span>
                 </div>
-                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern elegance.</p>
-                
+                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern
+                    elegance.</p>
+
                 <div class="contact-info">
                     <a href="tel:18001037308" class="contact-link phone-link">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
@@ -1610,5 +1566,33 @@
             </div>
         </div>
     </footer>
+    
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart (0)</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-body">
+            
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span class="total-label">Subtotal:</span>
+                <span class="total-amount">₹0</span>
+            </div>
+
+            <div class="cart-actions">
+                <a href="#" class="btn-checkout">Checkout Now</a>
+                <a href="full-cart.html" class="btn-view-cart">View Full Cart</a>
+                <a href="#" class="continue-link">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

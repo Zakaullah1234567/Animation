@@ -488,7 +488,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Our Story Section */
 .our-story-section {
     padding: 50px 2%;
     max-width: 1400px;
@@ -518,7 +517,6 @@ body {
     background-position: center;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .story-content {
     display: flex;
@@ -558,7 +556,6 @@ body {
     font-weight: 400;
 }
 
-/* Mobile Responsiveness for Our Story */
 @media (max-width: 992px) {
     .story-container {
         grid-template-columns: 1fr;
@@ -580,7 +577,6 @@ body {
     }
 }
 
-/* Core Values Section */
 .core-values-section {
     padding: 50px 2%;
     background-color: #fff;
@@ -648,7 +644,6 @@ body {
     text-align: center;
 }
 
-/* Mobile Responsiveness for Core Values */
 @media (max-width: 1200px) {
     .values-container {
         grid-template-columns: repeat(2, 1fr);
@@ -670,7 +665,6 @@ body {
     }
 }
 
-/* Process Section */
 .process-section {
     padding: 80px 2%;
     background-color: #fff;
@@ -703,7 +697,6 @@ body {
     max-width: 1400px;
     margin: 0 auto;
 }
-
 
 .process-image-wrap {
     position: relative;
@@ -755,7 +748,6 @@ body {
     color: #444;
 }
 
-/* Mobile Responsiveness for Process */
 @media (max-width: 1200px) {
     .process-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -777,7 +769,6 @@ body {
     }
 }
 
-/* Team Section */
 .team-section {
     padding: 80px 5%;
     background-color: #fff;
@@ -864,7 +855,6 @@ body {
     max-width: 400px;
 }
 
-/* Mobile Responsiveness for Team */
 @media (max-width: 768px) {
     .team-section {
         padding: 60px 20px;

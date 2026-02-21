@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mashaani - Naari With Saree Enhance Beauty</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <link rel="stylesheet" href="FAQstyle.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="cartStyle.css">
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
 </head>
+
 <body>
-     <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo">
@@ -133,7 +129,7 @@
             <a href="../index.html" class="brand-logo">
                 <img src="../assests/mashaani.webp" alt="Mashaani Official Logo - Traditional Wear">
             </a>
-            
+
             <div class="header-actions">
                 <button type="button" class="icon-btn cart-btn" aria-label="View Cart">
                     <i class="fa-brands fa-opencart"></i>
@@ -144,7 +140,7 @@
         <nav class="main-nav">
             <ul class="nav-list">
                 <li><a href="shopAll.html" class="nav-link">Shop All</a></li>
-                
+
                 <li class="dropdown-item">
                     <a href="#" class="nav-link">Categories <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
@@ -156,7 +152,8 @@
                         <li><a href="#">Heavy Saree</a></li>
                         <li><a href="#">Heavy Suit</a></li>
                         <li><a href="#">Blouses</a></li>
-                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a></li>
+                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a>
+                        </li>
                     </ul>
                 </li>
 
@@ -168,34 +165,6 @@
         </nav>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.querySelector('.menu-btn');
-            const mobileSidebar = document.getElementById('mobileSidebar');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
-            const closeSidebar = document.getElementById('closeSidebar');
-
-            const toggleSidebar = () => {
-                mobileSidebar.classList.toggle('active');
-                sidebarOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileSidebar.classList.contains('active') ? 'hidden' : '';
-            };
-
-            if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
-            if (closeSidebar) closeSidebar.addEventListener('click', toggleSidebar);
-            if (sidebarOverlay) sidebarOverlay.addEventListener('click', toggleSidebar);
-
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
-
-    <!-- FAQ Hero Section -->
     <section class="faq-hero">
         <div class="faq-hero-content">
             <h1 class="faq-hero-title">Frequently Asked Questions</h1>
@@ -203,7 +172,6 @@
         </div>
     </section>
 
-    <!-- FAQ Content Section -->
     <section class="faq-content-section">
         <div class="faq-container">
             <div class="faq-list">
@@ -215,7 +183,8 @@
                         </div>
                     </button>
                     <div class="faq-answer">
-                        <p>Our customer service team is available Monday through Friday, 9 AM - 5 PM ET. Reach us at hello@mashaani.com or +1(929) 460-3208. We respond within 24 business hours.</p>
+                        <p>Our customer service team is available Monday through Friday, 9 AM - 5 PM ET. Reach us at
+                            hello@mashaani.com or +1(929) 460-3208. We respond within 24 business hours.</p>
                     </div>
                 </div>
 
@@ -239,7 +208,8 @@
                         </div>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, orders can be modified or canceled before shipment. Contact us immediately for assistance.</p>
+                        <p>Yes, orders can be modified or canceled before shipment. Contact us immediately for
+                            assistance.</p>
                     </div>
                 </div>
 
@@ -274,7 +244,8 @@
                         </div>
                     </button>
                     <div class="faq-answer">
-                        <p>Each product page includes detailed size charts and measuring guides. Our customer service team can also help you find the right fit.</p>
+                        <p>Each product page includes detailed size charts and measuring guides. Our customer service
+                            team can also help you find the right fit.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -285,7 +256,8 @@
                         </div>
                     </button>
                     <div class="faq-answer">
-                        <p>Care instructions are provided with each product and on the product page. Most items require gentle hand washing or dry cleaning.</p>
+                        <p>Care instructions are provided with each product and on the product page. Most items require
+                            gentle hand washing or dry cleaning.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -296,7 +268,8 @@
                         </div>
                     </button>
                     <div class="faq-answer">
-                        <p>All Mashaani products are handcrafted with love in India by skilled artisans using traditional techniques.</p>
+                        <p>All Mashaani products are handcrafted with love in India by skilled artisans using
+                            traditional techniques.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -331,7 +304,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-section">
         <div class="footer-container">
             <div class="footer-column brand-column">
@@ -339,8 +311,9 @@
                     <img src="../assests/mashaani.webp" alt="Mashaani Logo" class="footer-logo-img">
                     <span class="footer-brand-name">Mashaani</span>
                 </div>
-                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern elegance.</p>
-                
+                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern
+                    elegance.</p>
+
                 <div class="contact-info">
                     <a href="tel:18001037308" class="contact-link phone-link">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
@@ -397,24 +370,25 @@
         </div>
     </footer>
 
-    <script>
-        // FAQ Accordion functionality
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                const isActive = faqItem.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart (0)</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-body">
+            <div class="empty-cart-state">
+                <div class="empty-cart-icon">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+                <h3 class="empty-cart-title">Your cart is empty</h3>
+                <p class="empty-cart-text">Start adding some amazing products!</p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

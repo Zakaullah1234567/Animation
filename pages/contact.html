@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mashaani - Naari With Saree Enhance Beauty</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <link rel="stylesheet" href="contactStyle.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="cartStyle.css">
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
 </head>
+
 <body>
-     <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo">
@@ -133,7 +129,7 @@
             <a href="../index.html" class="brand-logo">
                 <img src="../assests/mashaani.webp" alt="Mashaani Official Logo - Traditional Wear">
             </a>
-            
+
             <div class="header-actions">
                 <button type="button" class="icon-btn cart-btn" aria-label="View Cart">
                     <i class="fa-brands fa-opencart"></i>
@@ -144,7 +140,7 @@
         <nav class="main-nav">
             <ul class="nav-list">
                 <li><a href="shopAll.html" class="nav-link">Shop All</a></li>
-                
+
                 <li class="dropdown-item">
                     <a href="#" class="nav-link">Categories <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
@@ -156,7 +152,8 @@
                         <li><a href="#">Heavy Saree</a></li>
                         <li><a href="#">Heavy Suit</a></li>
                         <li><a href="#">Blouses</a></li>
-                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a></li>
+                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a>
+                        </li>
                     </ul>
                 </li>
 
@@ -168,44 +165,16 @@
         </nav>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.querySelector('.menu-btn');
-            const mobileSidebar = document.getElementById('mobileSidebar');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
-            const closeSidebar = document.getElementById('closeSidebar');
-
-            const toggleSidebar = () => {
-                mobileSidebar.classList.toggle('active');
-                sidebarOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileSidebar.classList.contains('active') ? 'hidden' : '';
-            };
-
-            if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
-            if (closeSidebar) closeSidebar.addEventListener('click', toggleSidebar);
-            if (sidebarOverlay) sidebarOverlay.addEventListener('click', toggleSidebar);
-
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
-
-    <!-- Contact Hero Section -->
     <section class="contact-hero">
         <div class="contact-hero-content">
             <h1 class="contact-hero-title">Contact Us</h1>
-            <p class="contact-hero-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            <p class="contact-hero-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as
+                possible.</p>
         </div>
     </section>
 
-    <!-- Contact Content Section -->
     <section class="contact-content-section">
-        <!-- Contact Information - Centered at Top -->
+        
         <div class="contact-info-wrapper">
             <div class="contact-info-box">
                 <div class="contact-icon-circle">
@@ -213,26 +182,25 @@
                 </div>
                 <h2 class="contact-main-title">Get in Touch</h2>
                 <p class="contact-question">Have a question? We're here to help</p>
-                
+
                 <div class="contact-detail">
                     <i class="fas fa-envelope contact-detail-icon"></i>
                     <a href="mailto:enquiry@mashaani.in" class="contact-email">enquiry@mashaani.in</a>
                 </div>
-                
+
                 <div class="contact-divider"></div>
-                
+
                 <div class="contact-detail">
                     <i class="fas fa-phone-alt contact-detail-icon"></i>
                     <a href="tel:18001037308" class="contact-phone">18001037308</a>
                 </div>
-                
+
                 <p class="contact-label">Toll-Free Number</p>
                 <p class="contact-hours">Working Hours: 9:00 AM – 7:00 PM, Monday to Saturday</p>
                 <p class="contact-hours">Store Timing: 9:00 AM – 7:00 PM, Monday to Saturday</p>
             </div>
         </div>
 
-        <!-- Contact Form - Below Contact Info -->
         <div class="contact-form-container">
             <div class="contact-form-wrapper">
                 <h2 class="form-title">Send us a Message</h2>
@@ -266,7 +234,8 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message*</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your inquiry..." required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your inquiry..."
+                            required></textarea>
                     </div>
                     <div class="form-checkbox-group">
                         <input type="checkbox" id="privacy" name="privacy" required>
@@ -282,7 +251,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-section">
         <div class="footer-container">
             <div class="footer-column brand-column">
@@ -290,8 +258,9 @@
                     <img src="../assests/mashaani.webp" alt="Mashaani Logo" class="footer-logo-img">
                     <span class="footer-brand-name">Mashaani</span>
                 </div>
-                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern elegance.</p>
-                
+                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern
+                    elegance.</p>
+
                 <div class="contact-info">
                     <a href="tel:18001037308" class="contact-link phone-link">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
@@ -365,12 +334,33 @@
 
         privacyCheckbox.addEventListener('change', toggleBtn);
 
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Thank you for your message! We will get back to you soon.');
             this.reset();
             toggleBtn();
         });
     </script>
+    
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart (0)</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-body">
+            <div class="empty-cart-state">
+                <div class="empty-cart-icon">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+                <h3 class="empty-cart-title">Your cart is empty</h3>
+                <p class="empty-cart-text">Start adding some amazing products!</p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

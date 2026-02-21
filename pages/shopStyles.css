@@ -638,12 +638,11 @@ body {
     color: #fdd835;
 }
 
-/* Shop Hero Section */
 .shop-hero {
     background: linear-gradient(to right rgb(233, 225, 110), rgb(216, 142, 6), rgb(197, 129, 5));
     padding: 100px 5% 50px;
     text-align: center;
-    /* border-bottom: 1px solid rgba(0,0,0,0.03); */
+    
 }
 
 .shop-hero-content {
@@ -688,7 +687,6 @@ body {
     }
 }
 
-/* Shop Layout */
 .shop-container {
     display: flex;
     max-width: 1400px;
@@ -697,7 +695,6 @@ body {
     gap: 40px;
 }
 
-/* Sidebar Styling */
 .filter-sidebar {
     width: 280px;
     flex-shrink: 0;
@@ -829,7 +826,6 @@ body {
     height: 16px;
 }
 
-/* Product Listing Content */
 .product-listing {
     flex: 1;
 }
@@ -938,7 +934,6 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* Product Grid Layout */
 .best-sellers-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1150,14 +1145,12 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Responsive Scaling */
 @media (max-width: 1024px) {
     .best-sellers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile Filter Button */
 .mobile-filter-btn {
     display: none;
     width: 100%;
@@ -1276,7 +1269,6 @@ body {
     }
 }
 
-/* List View Styles (One card per row) */
 .best-sellers-grid.list-view {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1315,7 +1307,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Responsive adjustments for List View */
 @media (max-width: 991px) {
     .best-sellers-grid.list-view .product-image-wrapper {
         width: 300px;

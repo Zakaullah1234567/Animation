@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mashaani - Naari With Saree Enhance Beauty</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <link rel="stylesheet" href="aboutStyle.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="cartStyle.css">
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
 </head>
+
 <body>
-     <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo">
@@ -133,7 +129,7 @@
             <a href="../index.html" class="brand-logo">
                 <img src="../assests/mashaani.webp" alt="Mashaani Official Logo - Traditional Wear">
             </a>
-            
+
             <div class="header-actions">
                 <button type="button" class="icon-btn cart-btn" aria-label="View Cart">
                     <i class="fa-brands fa-opencart"></i>
@@ -144,7 +140,7 @@
         <nav class="main-nav">
             <ul class="nav-list">
                 <li><a href="shopAll.html" class="nav-link">Shop All</a></li>
-                
+
                 <li class="dropdown-item">
                     <a href="#" class="nav-link">Categories <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
@@ -156,7 +152,8 @@
                         <li><a href="#">Heavy Saree</a></li>
                         <li><a href="#">Heavy Suit</a></li>
                         <li><a href="#">Blouses</a></li>
-                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a></li>
+                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a>
+                        </li>
                     </ul>
                 </li>
 
@@ -168,40 +165,15 @@
         </nav>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.querySelector('.menu-btn');
-            const mobileSidebar = document.getElementById('mobileSidebar');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
-            const closeSidebar = document.getElementById('closeSidebar');
-
-            const toggleSidebar = () => {
-                mobileSidebar.classList.toggle('active');
-                sidebarOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileSidebar.classList.contains('active') ? 'hidden' : '';
-            };
-
-            if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
-            if (closeSidebar) closeSidebar.addEventListener('click', toggleSidebar);
-            if (sidebarOverlay) sidebarOverlay.addEventListener('click', toggleSidebar);
-
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
     <section class="about-hero">
         <div class="about-hero-content animate__animated animate__fadeIn">
             <h1 class="about-hero-title">About Mashaani</h1>
-            <p class="about-hero-subtitle">Where heritage meets modern elegance - discover the story behind our brand</p>
+            <p class="about-hero-subtitle">Where heritage meets modern elegance - discover the story behind our brand
+            </p>
         </div>
     </section>
-    
-    <section class="our-story-section">
+
+    <section class="our-story-section" id="our-story">
         <div class="story-container">
             <div class="story-image-wrap">
                 <div class="story-image" style="background-image: url('assests/about 1.webp');"></div>
@@ -210,9 +182,16 @@
                 <span class="story-badge">Our Story</span>
                 <h2 class="story-title">Celebrating Indian Heritage Since 2024</h2>
                 <div class="story-text">
-                    <p>Mashaani was born from a deep love for Indian textiles and a vision to make traditional craftsmanship accessible to the modern world. Our name, derived from the Sanskrit word meaning “crafted with devotion,” reflects our commitment to honoring the artisans who pour their hearts into every piece.</p>
-                    <p>Founded by a team of fashion enthusiasts and cultural preservationists, we bridge the gap between age-old techniques and contemporary design sensibilities. Each garment tells a story of heritage, skill, and artistic expression.</p>
-                    <p>From the bustling textile hubs of Gujarat to the silk weaving centers of Karnataka, we work directly with artisan communities, ensuring fair wages and preserving traditional techniques for future generations.</p>
+                    <p>Mashaani was born from a deep love for Indian textiles and a vision to make traditional
+                        craftsmanship accessible to the modern world. Our name, derived from the Sanskrit word meaning
+                        “crafted with devotion,” reflects our commitment to honoring the artisans who pour their hearts
+                        into every piece.</p>
+                    <p>Founded by a team of fashion enthusiasts and cultural preservationists, we bridge the gap between
+                        age-old techniques and contemporary design sensibilities. Each garment tells a story of
+                        heritage, skill, and artistic expression.</p>
+                    <p>From the bustling textile hubs of Gujarat to the silk weaving centers of Karnataka, we work
+                        directly with artisan communities, ensuring fair wages and preserving traditional techniques for
+                        future generations.</p>
                 </div>
             </div>
         </div>
@@ -229,31 +208,35 @@
                     <span class="value-emoji">🎨</span>
                 </div>
                 <h3 class="value-card-title">Artisan Heritage</h3>
-                <p class="value-card-desc">We honor traditional craftsmanship and support the artisans who keep these skills alive.</p>
+                <p class="value-card-desc">We honor traditional craftsmanship and support the artisans who keep these
+                    skills alive.</p>
             </div>
-            
+
             <div class="value-card">
                 <div class="value-icon-circle">
                     <span class="value-emoji">🌱</span>
                 </div>
                 <h3 class="value-card-title">Sustainability</h3>
-                <p class="value-card-desc">Our commitment to eco-friendly practices ensures a better future for our planet.</p>
+                <p class="value-card-desc">Our commitment to eco-friendly practices ensures a better future for our
+                    planet.</p>
             </div>
-            
+
             <div class="value-card">
                 <div class="value-icon-circle">
                     <span class="value-emoji">✨</span>
                 </div>
                 <h3 class="value-card-title">Quality Excellence</h3>
-                <p class="value-card-desc">Every piece meets our rigorous standards for materials, construction, and finish.</p>
+                <p class="value-card-desc">Every piece meets our rigorous standards for materials, construction, and
+                    finish.</p>
             </div>
-            
+
             <div class="value-card">
                 <div class="value-icon-circle">
                     <span class="value-emoji">🤝</span>
                 </div>
                 <h3 class="value-card-title">Fair Trade</h3>
-                <p class="value-card-desc">We believe in ethical business practices and fair compensation for all our partners.</p>
+                <p class="value-card-desc">We believe in ethical business practices and fair compensation for all our
+                    partners.</p>
             </div>
         </div>
     </section>
@@ -271,7 +254,8 @@
                 </div>
                 <div class="process-info">
                     <h3 class="process-card-title">Design & Inspiration</h3>
-                    <p class="process-card-desc">Our designers draw inspiration from traditional Indian motifs, colors, and silhouettes, reimagining them for contemporary wear.</p>
+                    <p class="process-card-desc">Our designers draw inspiration from traditional Indian motifs, colors,
+                        and silhouettes, reimagining them for contemporary wear.</p>
                 </div>
             </div>
 
@@ -282,7 +266,8 @@
                 </div>
                 <div class="process-info">
                     <h3 class="process-card-title">Artisan Collaboration</h3>
-                    <p class="process-card-desc">We work closely with skilled artisans across India, combining their expertise with our design vision to create unique pieces.</p>
+                    <p class="process-card-desc">We work closely with skilled artisans across India, combining their
+                        expertise with our design vision to create unique pieces.</p>
                 </div>
             </div>
 
@@ -293,7 +278,8 @@
                 </div>
                 <div class="process-info">
                     <h3 class="process-card-title">Quality Assurance</h3>
-                    <p class="process-card-desc">Every garment undergoes rigorous quality checks to ensure it meets our high standards before reaching you.</p>
+                    <p class="process-card-desc">Every garment undergoes rigorous quality checks to ensure it meets our
+                        high standards before reaching you.</p>
                 </div>
             </div>
         </div>
@@ -312,7 +298,8 @@
                 <div class="team-info">
                     <h3 class="member-name">Pooja Kapoor</h3>
                     <span class="member-role">Founder & Creative Director</span>
-                    <p class="member-bio">With over 15 years in fashion design, Pooja brings together traditional aesthetics with modern sensibilities.</p>
+                    <p class="member-bio">With over 15 years in fashion design, Pooja brings together traditional
+                        aesthetics with modern sensibilities.</p>
                 </div>
             </div>
         </div>
@@ -324,8 +311,9 @@
                     <img src="../assests/mashaani.webp" alt="Mashaani Logo" class="footer-logo-img">
                     <span class="footer-brand-name">Mashaani</span>
                 </div>
-                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern elegance.</p>
-                
+                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern
+                    elegance.</p>
+
                 <div class="contact-info">
                     <a href="tel:18001037308" class="contact-link phone-link">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
@@ -381,5 +369,26 @@
             </div>
         </div>
     </footer>
+    
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart (0)</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-body">
+            <div class="empty-cart-state">
+                <div class="empty-cart-icon">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+                <h3 class="empty-cart-title">Your cart is empty</h3>
+                <p class="empty-cart-text">Start adding some amazing products!</p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

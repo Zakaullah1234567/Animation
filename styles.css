@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-color: green white;
 }
 
 body {
@@ -1083,7 +1084,6 @@ body {
     color: #fdd835;
 }
 
-
 .hero-line {
     position: absolute;
     top: -20%; 
@@ -1399,7 +1399,6 @@ body {
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
-
 
 .testimonial-header {
     display: flex;

@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mashaani - Naari With Saree Enhance Beauty</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <link rel="stylesheet" href="styles.css">
-    
-    <script defer>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="pages/cartStyle.css">
+
+    <script src="js/cart.js" defer></script>
+    <script src="js/navigation.js" defer></script>
 </head>
+
 <body>
-    
+
     <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-header">
@@ -39,7 +35,7 @@
         </div>
 
         <div class="sidebar-body">
-            <div class="sidebar-cart-card">
+            <div class="sidebar-cart-card cart-btn">
                 <div class="cart-card-content">
                     <i class="fas fa-shopping-basket cart-card-icon"></i>
                     <span>Cart</span>
@@ -144,7 +140,7 @@
             <a href="#" class="brand-logo">
                 <img src="assests/mashaani.webp" alt="Mashaani Official Logo - Traditional Wear">
             </a>
-            
+
             <div class="header-actions">
                 <button type="button" class="icon-btn cart-btn" aria-label="View Cart">
                     <i class="fa-brands fa-opencart"></i>
@@ -155,7 +151,7 @@
         <nav class="main-nav">
             <ul class="nav-list">
                 <li><a href="pages/shopAll.html" class="nav-link">Shop All</a></li>
-                
+
                 <li class="dropdown-item">
                     <a href="#" class="nav-link">Categories <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
@@ -167,7 +163,8 @@
                         <li><a href="#">Heavy Saree</a></li>
                         <li><a href="#">Heavy Suit</a></li>
                         <li><a href="#">Blouses</a></li>
-                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a></li>
+                        <li class="view-all"><a href="#">View All Collections <i class="fas fa-arrow-right"></i></a>
+                        </li>
                     </ul>
                 </li>
 
@@ -179,32 +176,6 @@
         </nav>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.querySelector('.menu-btn');
-            const mobileSidebar = document.getElementById('mobileSidebar');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
-            const closeSidebar = document.getElementById('closeSidebar');
-
-            const toggleSidebar = () => {
-                mobileSidebar.classList.toggle('active');
-                sidebarOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileSidebar.classList.contains('active') ? 'hidden' : '';
-            };
-
-            if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
-            if (closeSidebar) closeSidebar.addEventListener('click', toggleSidebar);
-            if (sidebarOverlay) sidebarOverlay.addEventListener('click', toggleSidebar);
-
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    e.currentTarget.classList.add('active');
-                });
-            });
-        });
-    </script>
 
     <main class="hero-section">
         <div class="hero-shapes">
@@ -213,23 +184,23 @@
             <div class="shape shape-3"></div>
             <div class="shape shape-4"></div>
         </div>
-        
+
         <div class="hero-content animate__animated animate__fadeInUp">
             <div class="hero-line line-left"></div>
             <div class="hero-line line-right"></div>
             <div class="hero-logo-wrapper">
                 <img src="assests/mashaani.webp" alt="Mashaani Emblem" class="hero-emblem">
             </div>
-            
+
             <h1 class="hero-title">Mashaani</h1>
             <p class="hero-subtitle">Naari With Saree Enhance Beauty</p>
             <p class="hero-description">Celebrating timeless traditions and modern elegance</p>
-            
+
             <div class="hero-actions">
-                <a href="#" class="btn btn-primary">
+                <a href="pages/collection.html" class="btn btn-primary">
                     <i class="fas fa-leaf"></i> Explore Collection <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="#" class="btn btn-outline">
+                <a href="pages/about.html#our-story" class="btn btn-outline">
                     Our Story <i class="far fa-heart"></i>
                 </a>
             </div>
@@ -239,49 +210,53 @@
     <section class="featured-section">
         <div class="section-header">
             <h2 class="section-title">Featured Collections</h2>
-            <p class="section-subtitle">Discover our carefully curated collections that blend traditional craftsmanship with contemporary design</p>
+            <p class="section-subtitle">Discover our carefully curated collections that blend traditional craftsmanship
+                with contemporary design</p>
         </div>
 
         <div class="collections-grid">
-            <div class="collection-card">
-                <div class="card-image" style="background-image: url('assests/card 1.webp');"></div> 
+            <div class="collection-card" onclick="window.location.href='pages/shopAll.html?category=Daily Wear Suit'">
+                <div class="card-image" style="background-image: url('assests/card 1.webp');"></div>
                 <div class="card-overlay"></div>
-                
+
                 <span class="item-badge">29 Items</span>
                 <div class="icon-badge"><i class="fas fa-spa"></i></div>
-                
+
                 <div class="card-content">
                     <h3 class="card-title">Daily Wear Suit</h3>
                     <p class="card-desc">Comfortable and stylish everyday clothing</p>
-                    <a href="#" class="card-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                    <a href="pages/shopAll.html?category=Daily Wear Suit" class="card-link">Explore Collection <i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <div class="collection-card">
+            <div class="collection-card" onclick="window.location.href='pages/shopAll.html?category=Daily Wear Saree'">
                 <div class="card-image" style="background-image: url('assests/card 2.webp');"></div>
                 <div class="card-overlay"></div>
-                
+
                 <span class="item-badge">15 Items</span>
                 <div class="icon-badge"><i class="fas fa-tshirt"></i></div>
-                
+
                 <div class="card-content">
                     <h3 class="card-title">Daily Wear Saree</h3>
                     <p class="card-desc">Handcrafted with age-old techniques passed down through generations</p>
-                    <a href="#" class="card-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                    <a href="pages/shopAll.html?category=Daily Wear Saree" class="card-link">Explore Collection <i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <div class="collection-card">
+            <div class="collection-card" onclick="window.location.href='pages/shopAll.html?category=Siders Lehnga'">
                 <div class="card-image" style="background-image: url('assests/card 3.png');"></div>
                 <div class="card-overlay"></div>
-                
+
                 <span class="item-badge">10 Items</span>
                 <div class="icon-badge"><i class="fas fa-female"></i></div>
-                
+
                 <div class="card-content">
                     <h3 class="card-title">Siders Lehnga</h3>
                     <p class="card-desc">Elegant bridal wear and wedding party outfits</p>
-                    <a href="#" class="card-link">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                    <a href="pages/shopAll.html?category=Siders Lehnga" class="card-link">Explore Collection <i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -292,7 +267,7 @@
             <h2 class="section-title">Best Sellers</h2>
             <p class="section-subtitle">Our most loved pieces that customers can't stop talking about</p>
         </div>
-<div class="best-sellers-grid">
+        <div class="best-sellers-grid">
             <div class="product-card">
                 <div class="product-image-wrapper">
                     <span class="sale-badge">SALE</span>
@@ -313,7 +288,8 @@
                     </div>
                     <span class="discount-tag">(20% OFF)</span>
                     <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
+                        <button class="add-cart-btn" data-id="idx-1" data-title="Ready-to-wear saree" data-price="2800"
+                            data-image="assests/cart 1.webp">Add to Cart</button>
                         <button class="wishlist-btn">Wishlist</button>
                     </div>
                 </div>
@@ -336,7 +312,8 @@
                     </div>
                     <span class="discount-tag">(10% OFF)</span>
                     <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
+                        <button class="add-cart-btn" data-id="idx-2" data-title="Yellow Golden Kadai Blouse"
+                            data-price="2700" data-image="assests/cart 2.webp">Add to Cart</button>
                         <button class="wishlist-btn">Wishlist</button>
                     </div>
                 </div>
@@ -359,16 +336,16 @@
                     </div>
                     <span class="discount-tag">(30% OFF)</span>
                     <div class="product-buttons">
-                        <button class="add-cart-btn">Add to Cart</button>
+                        <button class="add-cart-btn" data-id="idx-3" data-title="Mehndi Colour Blouse" data-price="2800"
+                            data-image="assests/cart 3.webp">Add to Cart</button>
                         <button class="wishlist-btn">Wishlist</button>
                     </div>
                 </div>
             </div>
         </div>
-        
 
         <div class="center-btn-wrapper">
-            <a href="#" class="btn btn-primary view-all-btn">
+            <a href="pages/shopAll.html" class="btn btn-primary view-all-btn">
                 <i class="fas fa-leaf"></i> View All Products
             </a>
         </div>
@@ -377,7 +354,8 @@
     <section class="why-choose-section">
         <div class="section-header">
             <h2 class="section-title">Why Choose Mashaani</h2>
-            <p class="section-subtitle">We don't just sell clothes, we create experiences that celebrate Indian heritage</p>
+            <p class="section-subtitle">We don't just sell clothes, we create experiences that celebrate Indian heritage
+            </p>
         </div>
 
         <div class="features-grid">
@@ -428,11 +406,14 @@
                     <div class="customer-info">
                         <h4 class="customer-name">Pooja Kapoor</h4>
                         <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                 </div>
-                <p class="testimonial-text">"The quality of the fabrics is exceptional! My wedding lehenga was absolutely stunning. The intricate embroidery and attention to detail made me feel like a princess. Mashaani truly understands Indian traditions."</p>
+                <p class="testimonial-text">"The quality of the fabrics is exceptional! My wedding lehenga was
+                    absolutely stunning. The intricate embroidery and attention to detail made me feel like a princess.
+                    Mashaani truly understands Indian traditions."</p>
                 <div class="testimonial-footer">
                     <span class="collection-tag">Wedding Collection</span>
                     <i class="fas fa-heart like-icon"></i>
@@ -447,8 +428,9 @@
                     <img src="assests/mashaani.webp" alt="Mashaani Logo" class="footer-logo-img">
                     <span class="footer-brand-name">Mashaani</span>
                 </div>
-                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern elegance.</p>
-                
+                <p class="footer-desc">Handcrafted with love in India, celebrating timeless traditions and modern
+                    elegance.</p>
+
                 <div class="contact-info">
                     <a href="tel:18001037308" class="contact-link phone-link">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
@@ -505,5 +487,37 @@
         </div>
     </footer>
 
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart (1)</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-body">
+
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span class="total-label">Subtotal:</span>
+                <span class="total-amount">₹0</span>
+            </div>
+
+            <div class="cart-actions">
+                <a href="#" class="btn-checkout">Checkout Now</a>
+                <a href="pages/full-cart.html" class="btn-view-cart">View Full Cart</a>
+                <a href="#" class="continue-link">Continue Shopping</a>
+            </div>
+
+            <div class="shipping-status" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <span>Congratulations! You get FREE shipping</span>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
